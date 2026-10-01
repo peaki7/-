@@ -2,131 +2,154 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#08090d">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Probability">
-<title>Probability — Premium Quiz</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Personality Insight — Scientific Test</title>
 <style>
-:root{--bg:#08090d;--panel:#11131a;--panel2:#181b24;--text:#f7f7f8;--muted:#989cab;--accent:#d6b36a;--accent2:#f1d898;--good:#65d391;--bad:#ff6b6b}
-*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-body{margin:0;background:radial-gradient(circle at 50% -10%,#292116 0,#0b0c11 38%,#08090d 72%);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif;min-height:100vh}
-.app{width:min(720px,100%);margin:auto;padding:env(safe-area-inset-top) 18px calc(28px + env(safe-area-inset-bottom));min-height:100vh}
-.card{background:linear-gradient(145deg,#151720,#0f1117);border:1px solid #ffffff12;border-radius:30px;box-shadow:0 24px 70px #0008;padding:24px}
-.logo{width:76px;height:76px;border-radius:24px;margin:auto;display:grid;place-items:center;font-size:40px;background:linear-gradient(145deg,#e7c77e,#8f6d32);box-shadow:0 10px 35px #c39a4938}
-h1{font-size:34px;margin:18px 0 4px;text-align:center;letter-spacing:-1px}.sub{text-align:center;color:var(--muted);margin-bottom:25px}
-.levels{display:grid;gap:12px}.level{width:100%;border:1px solid #ffffff12;background:var(--panel2);color:var(--text);border-radius:19px;padding:17px;text-align:right;display:flex;align-items:center;gap:13px;font-size:16px}.level .icon{font-size:25px}.level.active{border-color:#d6b36a88;background:linear-gradient(90deg,#d6b36a18,#ffffff06)}.check{margin-right:auto;color:var(--accent)}
-.primary{border:0;background:linear-gradient(135deg,#efd28a,#a77d32);color:#17130b;font-weight:800;border-radius:19px;padding:17px;width:100%;font-size:17px;margin-top:16px;box-shadow:0 12px 30px #c39a4930}
-.hint{margin-top:14px;text-align:center;color:var(--muted);font-size:13px}
-.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:15px}.pill{border:1px solid #ffffff12;background:#ffffff08;border-radius:99px;padding:8px 12px;color:var(--muted);font-size:13px}
-.timer{position:relative;width:62px;height:62px;display:grid;place-items:center}.timer svg{position:absolute;inset:0;transform:rotate(-90deg)}.timer circle{fill:none;stroke-width:5}.track{stroke:#ffffff10}.progress{stroke:var(--accent);stroke-linecap:round;transition:stroke-dashoffset .4s linear}.timeText{font-size:16px;font-weight:800}
-.question{font-size:23px;line-height:1.55;font-weight:750;margin:22px 2px}.answers{display:grid;gap:11px}.answer{border:1px solid #ffffff10;background:#151821;color:var(--text);border-radius:18px;padding:17px;text-align:right;font-size:16px;line-height:1.4;min-height:58px}.answer.selected{border-color:#d6b36a99;background:#d6b36a12}.answer.correct{border-color:#65d39199;background:#65d39112}.answer.wrong{border-color:#ff6b6b99;background:#ff6b6b12}.answer:disabled{opacity:1}
-.feedback{margin-top:15px;border-radius:18px;padding:16px;background:#ffffff07;border:1px solid #ffffff0c;line-height:1.7;min-height:60px}.good{color:var(--good)}.bad{color:var(--bad)}
-.next{display:none;border:0;width:100%;padding:17px;margin-top:12px;border-radius:18px;background:linear-gradient(135deg,#efd28a,#a77d32);font-weight:800;font-size:17px;color:#17130b}
-.result{text-align:center}.medal{font-size:70px;margin:4px}.score{font-size:64px;font-weight:900;margin:8px;color:var(--accent2)}.stat{display:flex;justify-content:space-between;background:#ffffff07;border:1px solid #ffffff0c;border-radius:16px;padding:14px;margin-top:9px}.label{color:var(--muted)}.best{color:var(--accent2);font-weight:800}.hidden{display:none}
+:root{--bg:#090909;--card:#121212;--gold:#d6ad55;--gold2:#f0d58a;--muted:#a7a7a7;--line:#292929}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% -10%,#252016 0,#090909 42%);color:#fff;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Arial,sans-serif;min-height:100vh}
+.wrap{width:min(720px,92%);margin:auto;padding:28px 0 50px}.brand{text-align:center;color:var(--gold2);font-weight:800;letter-spacing:2px;font-size:13px}
+h1{font-size:30px;text-align:center;margin:10px 0 7px}.sub{text-align:center;color:var(--muted);line-height:1.7;margin:0 auto 24px}
+.card{background:linear-gradient(145deg,#151515,#0f0f0f);border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:0 20px 60px #0008}
+.meta{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px;margin-bottom:12px}
+.timer{color:var(--gold2);font-variant-numeric:tabular-nums;font-weight:800}
+.bar{height:6px;background:#242424;border-radius:99px;overflow:hidden;margin-bottom:25px}.fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold2));width:0;transition:.3s}
+.q{font-size:22px;line-height:1.5;font-weight:750;margin:8px 0 18px}.hint{color:#999;font-size:13px;margin-bottom:15px}
+.option{width:100%;text-align:right;padding:16px 17px;margin:10px 0;border-radius:15px;border:1px solid #303030;background:#171717;color:#eee;font-size:16px;cursor:pointer;transition:.18s}
+.option:hover{border-color:#92763a;transform:translateY(-1px)}.option.selected{border-color:var(--gold);background:#201b10;box-shadow:0 0 0 1px #d6ad5533}
+.next{width:100%;margin-top:15px;padding:15px;border:0;border-radius:15px;background:linear-gradient(90deg,#b98d36,#efd078);color:#111;font-weight:900;font-size:16px;cursor:pointer}.next:disabled{opacity:.35;cursor:not-allowed}
+.hidden{display:none}.intro label{display:block;color:#ccc;font-size:14px;margin:13px 0 7px}.intro input{width:100%;padding:14px;border-radius:12px;border:1px solid #303030;background:#0d0d0d;color:#fff;font-size:16px}
+.result h2{text-align:center;font-size:26px}.scoregrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}.metric{border:1px solid var(--line);border-radius:15px;padding:14px}.metric b{display:flex;justify-content:space-between;font-size:14px}.track{height:7px;background:#242424;border-radius:99px;margin-top:9px;overflow:hidden}.track i{display:block;height:100%;background:linear-gradient(90deg,var(--gold),var(--gold2))}
+.box{border-top:1px solid var(--line);padding-top:15px;margin-top:15px}.box h3{margin:0 0 7px;color:var(--gold2)}.box p{color:#d0d0d0;line-height:1.8;margin:0}
+.restart{margin-top:20px;background:#171717;color:#fff;border:1px solid #444;padding:13px 18px;border-radius:12px;cursor:pointer;width:100%}
+.small{text-align:center;color:#777;font-size:11px;line-height:1.7;margin-top:16px}
+@media(max-width:520px){h1{font-size:25px}.q{font-size:19px}.scoregrid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<div class="app"><div class="card" id="app"></div></div>
+<div class="wrap">
+<div class="brand">PERSONALITY INSIGHT • SCIENTIFIC SELF‑REPORT</div>
+<h1>اختبار الشخصية المختصر</h1>
+<p class="sub">مبني على أبعاد الشخصية الخمسة الكبرى Big Five. اختر الإجابة الأقرب لك عادةً، وليس الإجابة التي تتمنى أن تكون عليها.</p>
+
+<section id="intro" class="card intro">
+<label>الاسم (اختياري)</label><input id="name" placeholder="اكتب اسمك">
+<p class="hint" style="margin-top:15px">لا نستخدم تاريخ الميلاد. كل سؤال له عدّاد مستقل.</p>
+<button class="next" onclick="start()">ابدأ الاختبار</button>
+</section>
+
+<section id="quiz" class="card hidden">
+<div class="meta"><span id="num"></span><span class="timer">⏱ <span id="time">20</span> ث</span></div>
+<div class="bar"><div id="fill" class="fill"></div></div>
+<div id="q" class="q"></div><div class="hint">اختر إجابة واحدة</div>
+<div id="opts"></div>
+<button id="next" class="next" disabled onclick="advance()">التالي</button>
+</section>
+
+<section id="result" class="card result hidden"></section>
+</div>
+
 <script>
-const BANK={
-سهل:[
-["ما احتمال ظهور الرقم 4 عند رمي حجر نرد مرة واحدة؟",["1/2","1/3","1/6","1/4"],2,"هناك نتيجة واحدة مناسبة من أصل 6: 1/6."],
-["ما احتمال ظهور رقم زوجي عند رمي حجر نرد؟",["1/6","1/3","1/2","2/3"],2,"الأرقام 2 و4 و6: ثلاث نتائج من أصل 6 = 1/2."],
-["ما احتمال ظهور رقم أكبر من 3؟",["1/6","1/3","1/2","2/3"],2,"الأرقام 4 و5 و6، أي 3 من أصل 6 = 1/2."],
-["ما احتمال ظهور رقم فردي؟",["1/6","1/3","1/2","2/3"],2,"الأرقام 1 و3 و5، أي 3 من أصل 6 = 1/2."],
-["ما احتمال ظهور رقم أقل من 5؟",["1/3","1/2","2/3","5/6"],2,"الأرقام 1 و2 و3 و4: أربع نتائج من أصل 6 = 2/3."]
-],
-متوسط:[
-["رميت حجر نرد مرتين. ما احتمال أن يكون مجموع الرقمين 7؟",["1/12","1/6","1/4","1/3"],1,"هناك 6 نتائج مجموعها 7 من أصل 36، إذن 1/6."],
-["رميت حجر نرد مرتين. ما احتمال ظهور الرقم 6 في المرتين؟",["1/6","1/12","1/36","1/18"],2,"1/6 × 1/6 = 1/36."],
-["رميت حجر نرد مرتين. ما احتمال أن يكون الرقمان زوجيين؟",["1/4","1/3","1/2","2/3"],0,"1/2 × 1/2 = 1/4."],
-["رميت حجر نرد مرتين. ما احتمال ظهور 6 مرة واحدة على الأقل؟",["1/6","5/18","11/36","1/3"],2,"1 − (5/6)² = 11/36."],
-["رميت حجرَي نرد. ما احتمال أن يكون المجموع أكبر من 9؟",["1/6","1/4","5/18","1/3"],0,"المجاميع 10 و11 و12 لها 6 نتائج من أصل 36 = 1/6."]
-],
-صعب:[
-["رميت حجر نرد مرتين. ما احتمال أن يكون مجموع الرقمين عددًا زوجيًا؟",["1/4","1/3","1/2","2/3"],2,"المجموع زوجي إذا كان الرقمان بنفس النوع. الاحتمال = 1/2."],
-["لديك 8 أشخاص. كم زوجًا مختلفًا يمكن اختياره؟",["28","16","32","56"],0,"C(8,2)=8×7÷2=28."],
-["كيس فيه 5 كرات حمراء و3 زرقاء. سحبت كرتين دون إرجاع. ما احتمال أن تكونا حمراوين؟",["5/14","5/16","10/21","25/64"],0,"5/8 × 4/7 = 5/14."],
-["رميت حجر نرد 3 مرات. ما احتمال ظهور الرقم 6 مرة واحدة على الأقل؟",["1/6","25/72","91/216","125/216"],2,"1 − (5/6)³ = 91/216."],
-["رميت عملة عادلة 4 مرات. ما احتمال ظهور وجهين بالضبط؟",["1/4","3/8","1/2","5/8"],1,"C(4,2)=6 من أصل 16، لذلك 3/8."]
-]};
+const questions=[
+["أميل إلى بدء الحديث مع أشخاص لا أعرفهم في موقف اجتماعي.","أوافق بشدة","أوافق","محايد","لا أوافق","لا أوافق بشدة"],
+["أستمتع بأن يكون يومي مليئًا بالتفاعل مع الآخرين.","أوافق بشدة","أوافق","محايد","لا أوافق","لا أوافق بشدة"],
+["أفضّل العمل بهدوء بمفردي لفترات طويلة.","أوافق بشدة","أوافق","محايد","لا أوافق","لا أوافق بشدة"],
+["أحافظ على هدوئي عندما تسوء الأمور بشكل مفاجئ.","أوافق بشدة","أوافق","محايد","لا أوافق","لا أوافق بشدة"],
+["بعد موقف مزعج، أظل أفكر فيه لفترة طويلة.","أوافق بشدة","أوافق","محايد","لا أوافق","لا أوافق بشدة"],
+["أستطيع العودة إلى توازني بسرعة بعد الضغط.","أوافق بشدة","أوافق","محايد","لا أوافق","لا أوافق بشدة"],
+["أحرص على إنهاء المهام في وقتها حتى لو لم يراقبني أحد.","أوافق بشدة","أوافق","محايد","لا أوافق","لا أوافق بشدة"],
+["أحب أن تكون الأشياء مرتبة ومخططًا لها مسبقًا.","أوافق بشدة","أوافق","محايد","لا أوافق","لا أوافق بشدة"],
+["أؤجل المهام أحيانًا رغم معرفتي بأهميتها.","أوافق بشدة","أوافق","محايد","لا أوافق","لا أوافق بشدة"],
+["أهتم بمشاعر الآخرين حتى عندما أختلف معهم.","أوافق بشدة","أوافق","محايد","لا أوافق","لا أوافق بشدة"],
+["أميل إلى إعطاء الناس مساحة لفهم وجهة نظرهم.","أوافق بشدة","أوافق","محايد","لا أوافق","لا أوافق بشدة"],
+["إذا اختلف معي شخص، أركز أكثر على إثبات أنني على حق.","أوافق بشدة","أوافق","محايد","لا أوافق","لا أوافق بشدة"],
+["أستمتع بتجربة أفكار أو طرق جديدة حتى لو لم أجربها من قبل.","أوافق بشدة","أوافق","محايد","لا أوافق","لا أوافق بشدة"],
+["أشعر بالفضول تجاه موضوعات مختلفة عن اهتماماتي المعتادة.","أوافق بشدة","أوافق","محايد","لا أوافق","لا أوافق بشدة"],
+["أفضل الطرق المألوفة على تجربة شيء جديد دون حاجة واضحة.","أوافق بشدة","أوافق","محايد","لا أوافق","لا أوافق بشدة"],
+["عندما أضع هدفًا، أستمر في متابعته حتى بعد انخفاض الحماس الأول.","أوافق بشدة","أوافق","محايد","لا أوافق","لا أوافق بشدة"],
+["أشعر بالارتياح عندما أتحمل مسؤولية قرار مهم.","أوافق بشدة","أوافق","محايد","لا أوافق","لا أوافق بشدة"],
+["أحتاج عادةً إلى وقت طويل قبل اتخاذ قرار حتى لو كانت المعلومات كافية.","أوافق بشدة","أوافق","محايد","لا أوافق","لا أوافق بشدة"],
+["أستطيع تغيير خطتي عندما تظهر معلومات أو ظروف جديدة.","أوافق بشدة","أوافق","محايد","لا أوافق","لا أوافق بشدة"],
+["أجد صعوبة في تقبل تغيير الخطط في اللحظة الأخيرة.","أوافق بشدة","أوافق","محايد","لا أوافق","لا أوافق بشدة"],
+["أفضل التفكير في عدة احتمالات قبل اختيار حل واحد.","أوافق بشدة","أوافق","محايد","لا أوافق","لا أوافق بشدة"],
+["أميل إلى ملاحظة التفاصيل التي قد يتجاهلها الآخرون.","أوافق بشدة","أوافق","محايد","لا أوافق","لا أوافق بشدة"],
+["أشعر بطاقة أكبر عندما أكون وسط مجموعة من الناس.","أوافق بشدة","أوافق","محايد","لا أوافق","لا أوافق بشدة"],
+["أحتاج إلى وقت منفرد لاستعادة طاقتي بعد يوم اجتماعي طويل.","أوافق بشدة","أوافق","محايد","لا أوافق","لا أوافق بشدة"],
+["عندما أتعرض للنقد، أستطيع الاستفادة منه دون أن يؤثر في مزاجي طويلًا.","أوافق بشدة","أوافق","محايد","لا أوافق","لا أوافق بشدة"],
+["أتعامل مع الأخطاء باعتبارها فرصة لفهم ما يمكن تحسينه.","أوافق بشدة","أوافق","محايد","لا أوافق","لا أوافق بشدة"],
+["إذا كانت المهمة مهمة، أضع لها خطوات واضحة قبل البدء.","أوافق بشدة","أوافق","محايد","لا أوافق","لا أوافق بشدة"],
+["أميل إلى إنهاء ما بدأته قبل الانتقال إلى شيء آخر.","أوافق بشدة","أوافق","محايد","لا أوافق","لا أوافق بشدة"],
+["أحاول الوصول إلى حل يراعي مصلحة جميع الأطراف عند الخلاف.","أوافق بشدة","أوافق","محايد","لا أوافق","لا أوافق بشدة"],
+["أحب النقاشات التي تجعلني أعيد النظر في أفكاري.","أوافق بشدة","أوافق","محايد","لا أوافق","لا أوافق بشدة"],
+["أشعر بالملل إذا كانت كل الأمور تسير بالطريقة نفسها دون أي تجديد.","أوافق بشدة","أوافق","محايد","لا أوافق","لا أوافق بشدة"]
+];
 
-let level="صعب",playerName="",data=[],idx=0,score=0,left=30,timer=null,started=0,elapsed=0,answered=false;
-const app=document.getElementById("app");
-function home(){
-app.innerHTML=`<div class="logo">🎲</div>
-<h1>Probability</h1>
-<div class="sub">اختبار الاحتمالات — النسخة الفاخرة</div>
-<div style="margin-bottom:18px">
-<label style="display:block;color:var(--muted);font-size:14px;margin-bottom:8px">اسم المتدرب</label>
-<input id="playerName" type="text" maxlength="40" placeholder="اكتب اسمك هنا"
-style="width:100%;padding:17px;border-radius:18px;border:1px solid #ffffff12;background:#151821;color:var(--text);font-size:17px;outline:none">
-</div>
-<div class="levels">${[['سهل','🌱'],['متوسط','⚡'],['صعب','🔥']].map(x=>`<button class="level ${level===x[0]?'active':''}" data-level="${x[0]}"><span class="icon">${x[1]}</span><b>${x[0]}</b><span class="check">${level===x[0]?'✓':''}</span></button>`).join('')}</div>
-<button class="primary" id="start">ابدأ الاختبار</button>
-<div class="hint">5 أسئلة • 30 ثانية لكل سؤال • شهادة باسمك عند النهاية</div>`;
-document.querySelectorAll("[data-level]").forEach(b=>b.onclick=()=>{level=b.dataset.level;home()});
-document.getElementById("start").onclick=()=>{
- const input=document.getElementById("playerName");
- const name=input.value.trim();
- if(!name){input.style.borderColor="var(--bad)";input.placeholder="فضلاً اكتب اسمك أولاً";return}
- playerName=name;startQuiz();
-};
-}
-function startQuiz(){data=BANK[level];idx=0;score=0;elapsed=0;renderQuestion()}
-function renderQuestion(){
-clearInterval(timer);answered=false;left=30;started=Date.now();
-const q=data[idx];
-app.innerHTML=`<div class="top"><span class="pill">${level} • ${idx+1}/${data.length}</span><div class="timer"><svg width="62" height="62"><circle class="track" cx="31" cy="31" r="26"/><circle id="ring" class="progress" cx="31" cy="31" r="26" stroke-dasharray="163.36" stroke-dashoffset="0"/></svg><span class="timeText" id="time">30</span></div></div>
-<div class="question">${q[0]}</div><div class="answers" id="answers">${q[1].map((x,k)=>`<button class="answer" data-k="${k}">${String.fromCharCode(65+k)}) ${x}</button>`).join("")}</div>
-<div class="feedback" id="feedback"></div><button class="next" id="next">${idx===data.length-1?'عرض النتيجة':'السؤال التالي ➜'}</button>`;
-document.querySelectorAll(".answer").forEach(b=>b.onclick=()=>choose(+b.dataset.k));
-document.getElementById("next").onclick=next;
-timer=setInterval(()=>{left--;document.getElementById("time").textContent=left;document.getElementById("ring").style.strokeDashoffset=(163.36*(1-left/30));if(left<=0){clearInterval(timer);choose(-1)}},1000);
-}
-function choose(k){
-if(answered)return;answered=true;clearInterval(timer);elapsed+=Math.min(30,Math.round((Date.now()-started)/1000));
-const q=data[idx],buttons=document.querySelectorAll(".answer");
-buttons.forEach((b,j)=>{b.disabled=true;if(j===q[2])b.classList.add("correct");if(j===k&&k!==q[2])b.classList.add("wrong");});
-if(k===q[2]){score++;document.getElementById("feedback").innerHTML=`<span class="good"><b>✓ إجابة صحيحة</b></span><br>${q[3]}`}else if(k===-1){document.getElementById("feedback").innerHTML=`<span class="bad"><b>⏰ انتهى الوقت</b></span><br>الإجابة الصحيحة: ${String.fromCharCode(65+q[2])}) ${q[1][q[2]]}<br>${q[3]}`}else{document.getElementById("feedback").innerHTML=`<span class="bad"><b>✕ إجابة خاطئة</b></span><br>الإجابة الصحيحة: ${String.fromCharCode(65+q[2])}) ${q[1][q[2]]}<br>${q[3]}`;}
-document.getElementById("next").style.display="block";
-}
-function next(){idx++;if(idx<data.length)renderQuestion();else result()}
-function result(){
-clearInterval(timer);
-let pct=Math.round(score/data.length*100),key="best_"+level,best=Number(localStorage.getItem(key)||0);
-if(score>best){best=score;localStorage.setItem(key,best)}
-let msg=pct===100?"ممتاز جدًا 🔥":pct>=80?"أداء رائع 👏":pct>=60?"جيد جدًا 💪":"واصل التدريب 🎯";
-const date=new Date().toLocaleDateString("ar-SA");
-app.innerHTML=`<div class="result">
-<div style="border:1px solid #d6b36a55;border-radius:24px;padding:24px;background:linear-gradient(145deg,#19150e,#101117);box-shadow:0 20px 60px #0008">
-<div style="font-size:42px">🏆</div>
-<div style="color:var(--accent);font-size:13px;letter-spacing:2px;margin-top:4px">CERTIFICATE OF COMPLETION</div>
-<h1 style="font-size:28px">شهادة إتمام الاختبار</h1>
-<div style="color:var(--muted);margin:18px 0 6px">تشهد هذه الشهادة بأن</div>
-<div style="font-size:30px;font-weight:900;color:var(--accent2);word-break:break-word">${escapeHTML(playerName)}</div>
-<div style="color:var(--muted);margin:8px 0 20px">قد أتم اختبار الاحتمالات بنجاح</div>
-<div class="stat"><span class="label">المستوى</span><b>${level}</b></div>
-<div class="stat"><span class="label">النتيجة</span><b>${score}/${data.length}</b></div>
-<div class="stat"><span class="label">النسبة</span><b>${pct}%</b></div>
-<div class="stat"><span class="label">الزمن</span><b>${elapsed} ثانية</b></div>
-<div style="margin-top:18px;color:var(--muted);font-size:12px">تاريخ الإصدار: ${date}</div>
-</div>
-<div style="margin-top:15px;color:var(--muted)">${msg}</div>
-<button class="primary" id="again">إعادة الاختبار</button>
-<button class="level" id="home" style="margin-top:10px;justify-content:center">العودة للرئيسية</button>
-</div>`;
-document.getElementById("again").onclick=startQuiz;
-document.getElementById("home").onclick=home;
-}
+const dims={E:"الانبساط والتفاعل الاجتماعي",A:"التوافق والتعاون",C:"الضمير الحي والتنظيم",N:"الاستقرار الانفعالي",O:"الانفتاح على الخبرة"};
+const map=[
+"E","E","E","N","N","N","C","C","C","A","A","A","O","O","O","C","E","C","O","N","O","C","E","E","N","N","C","C","A","O","O"
+];
+// reversed items by question index (0-based)
+const rev=new Set([2,4,8,11,14,17,19]);
+let i=0, answers=[], startTime=0, timer=null, seconds=20, elapsed=[];
 
-function escapeHTML(value){
-return value.replace(/[&<>"']/g,function(ch){
-return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[ch];
-});
+function start(){
+ document.getElementById("intro").classList.add("hidden");
+ document.getElementById("quiz").classList.remove("hidden");
+ render();
 }
-home();
+function render(){
+ const q=questions[i];
+ document.getElementById("num").textContent=`السؤال ${i+1} من ${questions.length}`;
+ document.getElementById("fill").style.width=((i/questions.length)*100)+"%";
+ document.getElementById("q").textContent=q[0];
+ const box=document.getElementById("opts"); box.innerHTML="";
+ for(let k=1;k<=5;k++){
+   const b=document.createElement("button"); b.className="option"; b.textContent=q[k];
+   b.onclick=()=>select(k,b); box.appendChild(b);
+ }
+ document.getElementById("next").disabled=true;
+ seconds=20; document.getElementById("time").textContent=seconds;
+ startTime=performance.now(); clearInterval(timer);
+ timer=setInterval(()=>{seconds--;document.getElementById("time").textContent=seconds;if(seconds<=0){clearInterval(timer);autoAdvance()}},1000);
+}
+function select(v,b){
+ answers[i]=v; document.querySelectorAll(".option").forEach(x=>x.classList.remove("selected")); b.classList.add("selected");
+ document.getElementById("next").disabled=false;
+}
+function autoAdvance(){ if(answers[i]==null) answers[i]=3; advance(); }
+function advance(){
+ clearInterval(timer); elapsed[i]=Math.round((performance.now()-startTime)/100)/10;
+ if(i<questions.length-1){i++;render()} else finish();
+}
+function pct(x){return Math.round(x);}
+function finish(){
+ clearInterval(timer);
+ document.getElementById("quiz").classList.add("hidden");
+ const s={E:0,A:0,C:0,N:0,O:0}, count={E:0,A:0,C:0,N:0,O:0};
+ answers.forEach((v,idx)=>{
+   let val=v; if(rev.has(idx)) val=6-v;
+   const d=map[idx]; s[d]+=val; count[d]++;
+ });
+ const p={}; Object.keys(s).forEach(d=>p[d]=Math.round(((s[d]-count[d])/(count[d]*4))*100));
+ const avg=elapsed.reduce((a,b)=>a+b,0)/elapsed.length;
+ const consistency=Math.max(68,Math.min(99,Math.round(100-Math.abs(answers.filter((v,idx)=>v===3).length-questions.length*.18)*.7)));
+ const highest=Object.keys(p).sort((a,b)=>p[b]-p[a])[0];
+ const descriptions={
+ E:"تميل إلى التفاعل والمبادرة الاجتماعية، مع قابلية أعلى للاستفادة من النقاش والتواصل عندما يخدم الهدف.",
+ A:"تميل إلى التعاون ومراعاة الآخرين وبناء حلول متوازنة عند الاختلاف.",
+ C:"تميل إلى التنظيم والمتابعة وتحويل الأهداف إلى خطوات عملية، مع اهتمام بالالتزام.",
+ N:"تظهر لديك قدرة جيدة على تنظيم الاستجابة الانفعالية، مع اختلاف طبيعي حسب الموقف.",
+ O:"تميل إلى الفضول وتقبل الأفكار الجديدة والنظر في أكثر من احتمال قبل الاستقرار على حل."
+ };
+ let name=document.getElementById("name").value.trim()||"المشارك";
+ let html=`<h2>التحليل المختصر</h2><p style="text-align:center;color:#aaa">النتيجة مبنية على إجاباتك في نموذج السمات الخمس الكبرى، وليست تشخيصًا نفسيًا.</p>
+ <div class="scoregrid">`;
+ for(const d of Object.keys(p)) html+=`<div class="metric"><b><span>${dims[d]}</span><span>${p[d]}%</span></b><div class="track"><i style="width:${p[d]}%"></i></div></div>`;
+ html+=`</div><div class="box"><h3>الخلاصة</h3><p><strong>${name}</strong> يظهر لديه أعلى بُعد في <strong>${dims[highest]}</strong>. ${descriptions[highest]}</p></div>
+ <div class="box"><h3>زمن الإجابة</h3><p>متوسط زمن الإجابة: <strong>${avg.toFixed(1)} ثانية</strong> لكل سؤال. إجمالي الاختبار: <strong>${Math.round(elapsed.reduce((a,b)=>a+b,0))} ثانية</strong>.</p></div>
+ <div class="box"><h3>ملاحظة منهجية</h3><p>النتيجة تصف نمط استجاباتك في هذا الاختبار الذاتي. للحصول على تقييم نفسي مُتحقق منه سريريًا يلزم استخدام أداة معيارية معتمدة وتفسير مختص.</p></div>
+ <button class="restart" onclick="location.reload()">إعادة الاختبار</button>`;
+ const r=document.getElementById("result");r.innerHTML=html;r.classList.remove("hidden");
+}
 </script>
-</body></html>
+</body>
+</html>
